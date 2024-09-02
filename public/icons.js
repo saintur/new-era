@@ -1,5 +1,5 @@
 const icons = [
-  { icon: 'alias 2x', cursor: 'alias'},
+  { icon: 'alias 2x', cursor: 'default'},
   { icon: 'nw-se 2x', cursor: 'nwse-resize'},
   { icon: 'ne-sw 2x', cursor: 'nesw-resize'},
   // { icon: 'nw 2x', cursor: 'nw-resize'},
