@@ -222,7 +222,7 @@ textarea::selection {
   flex-direction: column;
   min-width: 480px;
   width: 50%;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .demo {
