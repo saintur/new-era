@@ -321,7 +321,7 @@ textarea::selection {
 .card-lg {
   background-color: white;
   border-radius: 24px;
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 32px;
   border: 2px dashed #ececec;
