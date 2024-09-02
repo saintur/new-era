@@ -3,40 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resizer</title>
+  <title>New Era - Mouse Package</title>
   <link rel="stylesheet" type="text/css" href="./resizable.css"/>
 </head>
 <body>
   <div class="two-columns">
     <div class="column">
+      <div class="empty-space-sm"></div>
       <div class="card">
-        <div class="card-title">Demo</div>
+        <div class="card-title">New Era!</div>
         <div class="card-content">
-          <p>
-            You can test new illustrations after you installed the package on your machine. 
-          </p>
+          <p>You can hover over to compare your cursors.</p>
+          <div id="light-icons">
+          </div>
         </div>
       </div>
+      <div class="empty-space-sm"></div>
+      <div class="card dark">
+        <div class="card-title">New Era in Dark!</div>
+        <div class="card-content">
+          <p>You can hover over to compare your cursors.</p>
+          <div id="dark-icons">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column" id="">
       <div class="demo">
-        <div class='resizable'>
-          <div class='resizers'>
-            <div class='resizer top-left' ></div>
-            <div class='resizer top'></div>
-            <div class='resizer top-right'></div>
-            <div class='resizer right'></div>
-            <div class='resizer bottom-left'></div>
-            <div class='resizer bottom'></div>
-            <div class='resizer bottom-right'></div>
-            <div class='resizer left'></div>
-            <div class="note">
-              <div class="title">
-                <textarea rows="1">Testing your new cursors</textarea>
+        <div class="screen" id="screen">
+          <div class='resizable'>
+            <div class='resizers'>
+              <div class='resizer top-left' ></div>
+              <div class='resizer top'></div>
+              <div class='resizer top-right'></div>
+              <div class='resizer right'></div>
+              <div class='resizer bottom-left'></div>
+              <div class='resizer bottom'></div>
+              <div class='resizer bottom-right'></div>
+              <div class='resizer left'></div>
+              <div class="note">
+                <div class="note-header"><span class="red"></span><span class="yellow"></span><span class="green"></span><span>Topic</span></div>
+                <div class="note-content">
+                  <div class="title">
+                    <textarea rows="1">Your cursors</textarea>
+                  </div>
+                  <div> <textarea rows="3">Text is here. You can edit this text by clicking on it. </textarea></div>
+                </div>
               </div>
-              <div> <textarea rows="3">Text is here. You can edit this text by clicking on it. </textarea></div>
             </div>
           </div>
         </div>
       </div>
+      <div class="empty-space-sm"></div>
       <div class="card">
         <div class="card-title">Specifications</div>
         <div class="card-content">
@@ -45,7 +63,7 @@
             <ul>
               <li>
                 <div>
-                  Mousecape app | <a href="https://github.com/alexzielenski/Mousecape">Documentation</a> |  <a href="https://github.com/alexzielenski/Mousecape/releases">Download</a>
+                  Mousecape app | <a href="https://github.com/alexzielenski/Mousecape">Learn more</a> |  <a href="https://github.com/alexzielenski/Mousecape/releases">Download</a>
                 </div>
               </li>
               <li>
@@ -56,30 +74,16 @@
                   <i>About this Mac / see Mac OS version</i>
                 </div>
               </li>
-              
+              <li>
+                New Era package | <a href="">Download</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-    <div class="column">
-      <div class="empty-space"></div>
-      <div class="card">
-        <div class="card-title">New Era!</div>
-        <div class="card-content">
-          <div id="light-icons">
-          </div>
-        </div>
-      </div>
       <div class="empty-space-sm"></div>
-      <div class="card dark">
-        <div class="card-title">New Era in Dark!</div>
-        <div class="card-content">
-          <div id="dark-icons">
-          </div>
-        </div>
-      </div>
     </div>
+    
   </div>
   <script src="./resizable.js"></script>
   <script src="./icons.js"></script>

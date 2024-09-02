@@ -8,57 +8,94 @@ html {
   font-size: 13px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 h4 {
   margin: 0;
 }
+
 .title textarea {
   font-size: 16px;
   font-weight: 600;
-  
+
 }
-p, textarea {
+
+p,
+textarea {
   font-size: 13px;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 textarea {
   border: none;
   appearance: none;
   resize: none;
   outline: none;
 }
+
 a {
   color: #e5aa14;
 }
+
 textarea::selection {
   background-color: #e8c26140;
   color: #e5aa14;
 }
+
 .note {
-  padding: 12px;
   overflow: hidden;
 }
+.note-header {
+  height: 8px;
+  display: inline-flex;
+  gap: 8px;
+  padding: 8px;
+  width: 100%;    
+  align-items: center;
+  font-weight: 600;
+}
+.red, .yellow, .green {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+.red {
+  background-color: #e55252;
+}
+
+.yellow {
+  background-color: #ffc434;
+}
+
+.green {
+  background-color: #3dcd3d;
+}
+.note-content {
+  padding: 8px;
+}
 .resizable {
-  background: white;
   width: 240px;
   height: 100px;
   position: absolute;
-  top: 100px;
+  top: 120px;
   left: 100px;
 }
 
-.resizable .resizers{
+.resizable .resizers {
   width: 100%;
   height: 100%;
   border: 1px solid #e8c261;
   box-sizing: border-box;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 1px 8px #cecece;
+  box-shadow: 0 1px 8px #7b7b7b;
+  background-color: white;
 }
 
-.resizable .resizers .resizer{
-  border-radius: 9px; /*magic to turn square into circle*/
+.resizable .resizers .resizer {
+  border-radius: 9px;
+  /*magic to turn square into circle*/
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid #e8c261;
   position: absolute;
@@ -75,7 +112,7 @@ textarea::selection {
 
 .resizer.right {
   right: -5px;
-  bottom: 50%;  
+  bottom: 50%;
   width: 9px;
   height: 36px;
   cursor: ew-resize;
@@ -84,7 +121,7 @@ textarea::selection {
 
 .resizer.bottom {
   left: 50%;
-  bottom: -5px;  
+  bottom: -5px;
   width: 36px;
   height: 9px;
   cursor: ns-resize;
@@ -93,7 +130,7 @@ textarea::selection {
 
 .resizer.left {
   left: -5px;
-  bottom: 50%;  
+  bottom: 50%;
   width: 9px;
   height: 36px;
   cursor: ew-resize;
@@ -102,7 +139,7 @@ textarea::selection {
 
 .resizer.top-right {
   right: -5px;
-  top: -5px;  
+  top: -5px;
   width: 9px;
   height: 9px;
   cursor: nesw-resize;
@@ -139,61 +176,92 @@ textarea::selection {
 .moving-left {
   cursor: e-resize !important
 }
+
 .moving-right {
   cursor: w-resize !important
 }
+
 .moving-top {
   cursor: s-resize !important
 }
+
 .moving-bottom {
   cursor: n-resize !important
 }
+
 .moving-top-left {
   cursor: se-resize !important
 }
+
 .moving-top-right {
   cursor: sw-resize !important
 }
+
 .moving-bottom-left {
   cursor: ne-resize !important
 }
+
 .moving-bottom-right {
   cursor: nw-resize !important
 }
+
 .two-columns {
   display: flex;
   flex-direction: row;
-  max-width: 1024px;
+  max-width: 960px;
   justify-content: center;
+  flex-wrap: wrap;
   margin: auto;
 }
+
 .column {
   display: flex;
   flex-direction: column;
-  max-width: 480px;
+  min-width: 480px;
   width: 50%;
-  padding: 24px;
+  overflow-x: auto;
 }
+
 .demo {
-  position: relative;
   height: 500px;
+  background-image: url(./images/mbp-screen.png);
+  background-repeat: no-repeat;
+  background-size: 240%;
+  background-position-x: 27.5%;
+}
+
+.screen {
+  display: block;
+  position: relative;
+  width: 410px;
+  height: 401px;
+  top: 45px;
+  left: 70px;
+  overflow: hidden;
 }
 
 .card {
   box-shadow: 0 1px 8px #cecece;
   padding: 12px;
   border-radius: 12px;
-  margin: 8px;
   max-width: 320px;
   width: 320px;
   margin: 0 auto;
 }
+
 .card.dark {
   background: #3b3b3b;
 }
-.card.dark .card-title {
+
+.card.dark {
   color: rgb(201, 201, 201);
 }
+
+.card p {
+  margin-bottom: 8px;
+  color: rgb(141, 141, 141);
+}
+
 .card-title {
   font-size: 18px;
   margin-bottom: 12px;
@@ -202,7 +270,7 @@ textarea::selection {
 
 .empty-space-sm {
   display: block;
-  height: 40px;
+  height: 30px;
 }
 
 .empty-space {
@@ -210,12 +278,22 @@ textarea::selection {
   height: 160px;
 }
 
-#light-icons, #dark-icons {
+#light-icons,
+#dark-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 11px;
 }
+
 .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mouse-icon {
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;

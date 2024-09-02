@@ -1,33 +1,36 @@
 const icons = [
-  { icon: 'alias 2x'},
-  { icon: 'resize nwse 2x'},
-  { icon: 'resize nesw 2x'},
-  // { icon: 'resize nw 2x'},
-  // { icon: 'resize se 2x'},
-  // { icon: 'resize ne 2x'},
-  // { icon: 'resize sw 2x'},
-  // { icon: 'n 2x'},
-  // { icon: 's 2x'},
-  // { icon: 'e 2x'},
-  // { icon: 'w 2x'},
-  { icon: 'e-w 2x'},
-  { icon: 'n-s 2x'},
-  { icon: 'pointer 2x', height: 12 },
-  { icon: 'contextmenu 2x', height: 40 },
-  { icon: 'help 2x' },
-  { icon: 'ibeam 2x' },
-  { icon: 'cell 2x' },
-  { icon: 'move 2x' },
-  { icon: 'camera 2x', },
-  { icon: 'grab 2x' },
-  { icon: 'grabbing 2x' },
-  { icon: 'forbidden 2x' },
-  { icon: 'poof 2x' },
-  { icon: 'zoom in 2x' },
-  { icon: 'zoom out 2x' },
+  { icon: 'alias 2x', cursor: 'alias'},
+  { icon: 'nw-se 2x', cursor: 'nwse-resize'},
+  { icon: 'ne-sw 2x', cursor: 'nesw-resize'},
+  // { icon: 'nw 2x', cursor: 'nw-resize'},
+  // { icon: 'se 2x', cursor: 'se-resize'},
+  // { icon: 'ne 2x', cursor: 'ne-resize'},
+  // { icon: 'sw 2x', cursor: 'sw-resize'},
+  // { icon: 'n 2x', cursor: 'n-resize'},
+  // { icon: 's 2x', cursor: 's-resize'},
+  // { icon: 'e 2x', cursor: 'e-resize'},
+  // { icon: 'w 2x', cursor: 'w-resize'},
+  { icon: 'e-w 2x', cursor: 'alias', cursor: 'ew-resize'},
+  { icon: 'n-s 2x', cursor: 'alias', cursor: 'ns-resize'},
+  { icon: 'pointer 2x', height: 12, cursor: 'pointer' },
+  { icon: 'contextmenu 2x', height: 40, cursor: 'context-menu' },
+  { icon: 'help 2x', cursor: 'help' },
+  { icon: 'ibeam 2x', cursor: 'text' },
+  { icon: 'cell 2x', cursor: 'cell' },
+  { icon: 'move 2x', cursor: 'move' },
+  { icon: 'camera 2x', cursor: 'alias' },
+  { icon: 'grab 2x', cursor: 'grab' },
+  { icon: 'grabbing 2x', cursor: 'grabbing' },
+  { icon: 'forbidden 2x', cursor: 'not-allowed' },
+  { icon: 'poof 2x', cursor: 'alias' },
+  { icon: 'zoom in 2x', cursor: 'zoom-in' },
+  { icon: 'zoom out 2x', cursor: 'zoom-out' },
 ]
 
 icons.forEach(item => {
+  const content = document.createElement('div')
+  content.classList.add('mouse-icon');
+  content.style.cursor = item.cursor;
   const filename = `${item.icon}.png`;
   const img = document.createElement('img')
   img.classList.add('icon');
@@ -39,10 +42,14 @@ icons.forEach(item => {
     img.style.height = '18px'
   }
   const lightContainer = document.getElementById('light-icons');
-  lightContainer.appendChild(img);
+  content.appendChild(img)
+  lightContainer.appendChild(content);
 });
 
 icons.forEach(item => {
+  const content = document.createElement('div')
+  content.classList.add('mouse-icon');
+  content.style.cursor = item.cursor;
   const filename = `${item.icon}.png`;
   const img = document.createElement('img')
   img.classList.add('icon');
@@ -53,5 +60,6 @@ icons.forEach(item => {
     img.style.height = '18px'
   }
   const darkContainer = document.getElementById('dark-icons');
-  darkContainer.appendChild(img);
+  content.appendChild(img)
+  darkContainer.appendChild(content);
 });
