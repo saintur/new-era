@@ -1,6 +1,6 @@
 body,
 html {
-  background: white;
+  background: #f5f5f5;
   color: #3b3b3b;
   margin: 0;
   padding: 0;
@@ -227,20 +227,27 @@ textarea::selection {
   background-image: url(./images/mbp-screen.png);
   background-repeat: no-repeat;
   background-size: 240%;
-  background-position-x: 27.5%;
+  background-position-x: 26%;
+  border-bottom-left-radius: 16px;    
+  box-shadow: 0 -2px 8px #dcdcdc;
+  margin-left: 8px;
 }
 
 .screen {
   display: block;
   position: relative;
-  width: 410px;
-  height: 401px;
-  top: 45px;
-  left: 70px;
+  width: 395px;
+  height: 395px;
+  top: 44px;
+  left: 78px;
   overflow: hidden;
 }
-
+.card-skeleton {
+  max-width: 342px;
+  margin: auto;
+}
 .card {
+  background-color: white;
   box-shadow: 0 1px 8px #cecece;
   padding: 12px;
   border-radius: 12px;
