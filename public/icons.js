@@ -63,3 +63,22 @@ icons.forEach(item => {
   content.appendChild(img)
   darkContainer.appendChild(content);
 });
+
+icons.forEach(item => {
+  const content = document.createElement('div')
+  content.classList.add('mouse-icon');
+  content.style.cursor = item.cursor;
+  const filename = `${item.icon}.png`;
+  const img = document.createElement('img')
+  img.classList.add('icon');
+  img.src = `./icons/${filename}`;
+  img.alt = `${item.icon}.png`;
+  if (item.height) {
+    img.style.height = `${item.height}px`
+  } else {
+    img.style.height = '18px'
+  }
+  const lightContainer = document.getElementById('both-icons');
+  content.appendChild(img)
+  lightContainer.appendChild(content);
+});
